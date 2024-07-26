@@ -1,11 +1,17 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.app.json"
+  "compilerOptions": {
+    "sourceMap": true,
+    "strict": true,
+    "lib": ["DOM", "ES2015"],
+    "allowImportingTsExtensions": true,
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./@mf-types/*"]
     },
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ]
+    "emitDeclarationOnly": true,
+    "declaration": true // Add this line
+  },
+  "include": ["src/**/*"]
 }
